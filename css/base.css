@@ -33,3 +33,10 @@ canvas#bg-animation {
     background: var(--bg-overlay);
     backdrop-filter: blur(2px);
 }
+
+/* Page container styles */
+.page {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 28px var(--gutter) 120px;
+}
