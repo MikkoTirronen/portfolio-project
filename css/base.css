@@ -13,3 +13,14 @@
 * {box-sizing: border-box;}
 html, body { height: 100%; margin: 0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; color: var(--text); background: transparent; }
 
+/* Canvas styles */
+canvas#bg-animation {
+    position:fixed;
+    inset:0;
+    width:100vw;
+    height: 100vh;
+    z-index: -3;
+    pointer-events: none;
+    display:block;
+}
+
