@@ -1,0 +1,51 @@
+.hero {
+        position: relative;
+        width: 100%;
+        min-height: 28vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 3rem var(--gutter);
+        overflow: hidden;
+        border-radius: 12px;
+      }
+
+      /* frosted glass over animated background */
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.55);
+        backdrop-filter: blur(14px) saturate(1.2);
+        -webkit-backdrop-filter: blur(14px) saturate(1.2);
+        z-index: 0;
+      }
+
+      :root[data-theme="dark"] .hero::before {
+        background: rgba(0, 0, 0, 0.32);
+      }
+
+      /* Title + subtitle styles */
+      .hero-overlay {
+        position: relative;
+        z-index: 1;
+        text-align: right;
+        margin: 0;
+        padding: 0;
+      }
+
+      .hero-title {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 3.2rem;
+        font-weight: 700;
+        margin: 0;
+        color: var(--text);
+        letter-spacing: -1px;
+      }
+
+      .hero-subtitle {
+        margin-top: 0.6rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--muted);
+      }
