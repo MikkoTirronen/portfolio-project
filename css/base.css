@@ -1,0 +1,10 @@
+ /* base.css css global variables */
+:root {
+    --bg-overlay: rgba(255,255,255,0.65);
+    --text: #111;
+    --muted: #666;
+    --accent: #f4b276;
+    --max-width: 980px;
+    --gutter: 24px;
+    --radius: 14px;
+}
