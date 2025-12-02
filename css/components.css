@@ -77,10 +77,9 @@
       }
 
       /* About Section */
-
       .about-grid {
         display: flex;
-        grid-template-columns: 3fr 9fr;
+        /* grid-template-columns: 3fr 9fr; */
         gap: 18px;
         align-items: center;
       }
@@ -104,4 +103,27 @@
         display: inline;
         width: 100%;
         height: auto;
+      }
+
+       /* Skills Section */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+        gap: 16px;
+      }
+      .skill {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding: 10px 12px;
+        border-radius: 10px;
+        background: #f6f6f6;
+        font-weight: 600;
+        color: #222;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      }
+      .skill img {
+        width: 28px;
+        height: 28px;
+        opacity: 0.95;
       }
