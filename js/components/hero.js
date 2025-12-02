@@ -3,8 +3,8 @@
 export function Hero() {
   return ` 
         <div class="hero-overlay">
-            <h1 class="title">Mikko Tirronen</h1>
-            <p class="subtitle">Full Stack Developer</p>
+            <h1 class="hero-title">Mikko Tirronen</h1>
+            <p class="hero-subtitle">Full Stack Developer</p>
         <div>
     `;
 }
