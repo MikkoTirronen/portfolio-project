@@ -1,6 +1,6 @@
  /* base.css css global variables */
 :root {
-    --surface: #ffffffef;
+    --surface: #ffffff;
     --bg-overlay: rgba(255,255,255,0.65);
     --text: #111;
     --muted: #666;
