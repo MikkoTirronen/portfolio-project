@@ -1,5 +1,6 @@
  /* base.css css global variables */
 :root {
+    --surface: #ffffffef;
     --bg-overlay: rgba(255,255,255,0.65);
     --text: #111;
     --muted: #666;
@@ -7,6 +8,7 @@
     --max-width: 980px;
     --gutter: 24px;
     --radius: 14px;
+    --card-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* Universal selector styles */

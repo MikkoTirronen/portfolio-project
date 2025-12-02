@@ -1,3 +1,4 @@
+
 .hero {
         position: relative;
         width: 100%;
@@ -48,4 +49,59 @@
         font-size: 1.1rem;
         font-weight: 500;
         color: var(--muted);
+      }
+
+      /* CARD STYLES */
+      .card {
+        background: var(--surface);
+        border-radius: var(--radius);
+        box-shadow: var(--card-shadow);
+        padding: 40px;
+        margin: 36px 0;
+        will-change: opacity;
+        opacity: 0;
+        transition: opacity 420ms ease;
+      }
+
+      .card.inview {
+        opacity: 1;
+      }
+
+      /* Sections inside cards */
+      .card h2 {
+        font-family: "JetBrains Mono", monospace;
+        font-weight: 600;
+        margin: 0 0 16px;
+        font-size: 20px;
+        color: var(--text);
+      }
+
+      /* About Section */
+
+      .about-grid {
+        display: flex;
+        grid-template-columns: 3fr 9fr;
+        gap: 18px;
+        align-items: center;
+      }
+
+      .about-text p {
+        margin: 0 0 12px;
+        color: var(--text);
+        line-height: 1.6;
+        font-size: 15px;
+      }
+      .about-photo {
+        /* width: 100%; */
+        max-width: 320px;
+        border-radius: 16px;
+        overflow: hidden;
+        padding-top: 10px;
+        /* border: 6px solid rgba(0, 0, 0, 0.06);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); */
+      }
+      .about-photo img {
+        display: inline;
+        width: 100%;
+        height: auto;
       }
