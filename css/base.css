@@ -9,6 +9,7 @@
     --gutter: 24px;
     --radius: 14px;
     --card-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    --darkmode-color: #c0c0c8;
 }
 
 /* Universal selector styles */
@@ -53,3 +54,41 @@ canvas#bg-animation {
     padding: 28px var(--gutter) 120px;
      
 }
+
+/* Dark theme overrides */
+    :root[data-theme="dark"] .card {
+        background: rgba(28, 28, 32, 0.92);
+    }
+    :root[data-theme="dark"] .hero::before {
+        background: rgba(0, 0, 0, 0.55);
+    }
+    :root[data-theme="dark"] .nav {
+        background: rgba(20, 20, 20, 0.92);
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+    }
+
+    :root[data-theme="dark"] .project h3 {
+        color: #fff;
+    }
+    
+     :root[data-theme="dark"] h1, a, p{
+        color: #fff;
+    }
+    :root[data-theme="dark"] .hero-subtitle{
+        color: #c0c0c8;
+    }
+
+    :root[data-theme="dark"] .card p, :root[data-theme="dark"] h2{
+        color: #fff;
+    }
+
+    :root[data-theme="dark"] .project p {
+        color: #e2e2e6;
+    }
+    :root[data-theme="dark"] .project .meta img {
+            filter: brightness(1.2);
+    }
+
+    :root[data-theme="dark"] .hero::before {
+        background: rgba(0, 0, 0, 0.55);
+    }
