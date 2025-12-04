@@ -5,11 +5,11 @@ export function renderComponent(targetSelector, componentFn, props = {}) {
 
   const html = componentFn(props);
 
-  target.style.opacity = "0";
-  target.innerHTML += html;
+  target.style.opacity = "1";
+  target.innerHTML = html+target.innerHTML;
 
-  requestAnimationFrame(() => {
-    target.style.transition = "opacity .4s ease";
-    target.style.opacity = ".95";
-  });
+  // requestAnimationFrame(() => {
+  //   target.style.transition = "opacity .4s ease";
+  //   target.style.opacity = "1";
+  // });
 }
