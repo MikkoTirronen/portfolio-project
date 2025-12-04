@@ -6,10 +6,10 @@ export function renderComponent(targetSelector, componentFn, props = {}) {
   const html = componentFn(props);
 
   target.style.opacity = "0";
-  target.innerHTML = html;
+  target.innerHTML += html;
 
   requestAnimationFrame(() => {
     target.style.transition = "opacity .4s ease";
-    target.style.opacity = ".9";
+    target.style.opacity = ".95";
   });
 }
