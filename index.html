@@ -7,23 +7,22 @@
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/components.css" />
   </head>
-  <body id="body" class="page">
+  <body id="body" class="page" data-theme="light">
     <header id="header">
-      <nav
-        id="nav"
-        class="nav"
-        role="navigation"
-        aria-label="Main navigation"
-      ></nav>
+      <nav id="nav" class="nav" role="navigation" aria-label="Main navigation">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          🌙
+        </button>
+      </nav>
     </header>
     <main id="page">
       <section id="hero" class="hero"></section>
       <section id="about" class="card parallax"></section>
       <section id="skills" class="card parallax"></section>
-      
     </main>
   </body>
   <script src="./js/animations/background.js" type="module" defer></script>
   <script type="module" src="./js/app.js" defer></script>
   <script src="./js/animations/nav-scroll-animation.js"></script>
+  <script src="./js/animations/theme-toggle.js" defer></script>
 </html>
