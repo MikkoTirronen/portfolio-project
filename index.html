@@ -7,13 +7,23 @@
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/components.css" />
   </head>
-  <body>
-    <main id="page" class="page">
+  <body id="body" class="page">
+    <header id="header">
+      <nav
+        id="nav"
+        class="nav"
+        role="navigation"
+        aria-label="Main navigation"
+      ></nav>
+    </header>
+    <main id="page">
       <section id="hero" class="hero"></section>
       <section id="about" class="card parallax"></section>
       <section id="skills" class="card parallax"></section>
+      
     </main>
   </body>
-  <script src="./js/background.js" type="module" defer></script>
+  <script src="./js/animations/background.js" type="module" defer></script>
   <script type="module" src="./js/app.js" defer></script>
+  <script src="./js/animations/nav-scroll-animation.js"></script>
 </html>
