@@ -13,7 +13,17 @@
 
 /* Universal selector styles */
 * {box-sizing: border-box;}
-html, body { height: 100%; margin: 0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; color: var(--text); background: transparent; }
+
+html, body { 
+    height: auto;
+    min-height: 100%; 
+    margin: 0; 
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
+    -webkit-font-smoothing:antialiased; 
+    -moz-osx-font-smoothing:grayscale;
+     color: var(--text);
+     background: transparent;
+}
 
 /* Canvas styles */
 canvas#bg-animation {
@@ -33,7 +43,7 @@ canvas#bg-animation {
     z-index: -2;
     pointer-events: none;
     background: var(--bg-overlay);
-    backdrop-filter: blur(2px);
+    /* backdrop-filter: blur(2px); */
 }
 
 /* Page container styles */
@@ -41,4 +51,5 @@ canvas#bg-animation {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 28px var(--gutter) 120px;
+     
 }
