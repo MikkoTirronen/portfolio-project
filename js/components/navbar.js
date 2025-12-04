@@ -12,12 +12,13 @@ export function Navbar() {
           <a href="#projects" data-link>Projects</a>
           <a href="#contact" data-link>Contact</a>
         </div>
-          <button
-            id="themeToggle"
-            class="theme-toggle"
-            aria-label="Toggle theme"
-          >
-            🌙
-          </button>
-    `;
+        `;
 }
+
+        // <button
+        //   id="themeToggle"
+        //   class="theme-toggle"
+        //   aria-label="Toggle theme"
+        // >
+        //   🌙
+        // </button>
