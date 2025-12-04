@@ -107,10 +107,6 @@ section{
         z-index: 0;
       }
 
-      :root[data-theme="dark"] .hero::before {
-        background: rgba(0, 0, 0, 0.32);
-      }
-
       /* Title + subtitle styles */
       .hero-overlay {
         position: relative;
