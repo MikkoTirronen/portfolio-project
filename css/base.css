@@ -9,7 +9,7 @@
     --gutter: 24px;
     --radius: 14px;
     --card-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-    --darkmode-color: #c0c0c8;
+    --darkmode-color: #c0c0c6;
 }
 
 /* Universal selector styles */
@@ -68,22 +68,29 @@ canvas#bg-animation {
     }
 
     :root[data-theme="dark"] .project h3 {
-        color: #fff;
+        color: var(--surface);
+    }
+    :root[data-theme="dark"] .project-card {
+      background: rgba(0, 0, 0, 0.3);
+      border-color: rgba(255,255,255,0.1);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.45);
     }
     
-     :root[data-theme="dark"] h1, a, p{
-        color: #fff;
+     :root[data-theme="dark"] h1, a, p, h2, h3{
+        color: var(--surface);
     }
     :root[data-theme="dark"] .hero-subtitle{
-        color: #c0c0c8;
+        color: var(--darkmode-color);
     }
 
     :root[data-theme="dark"] .card p, :root[data-theme="dark"] h2{
-        color: #fff;
+        color: var(--surface);
     }
-
+    :root[data-theme="dark"] .project-card h3{
+        color:var(--surface);
+    }
     :root[data-theme="dark"] .project p {
-        color: #e2e2e6;
+        color: var(--darkmode-color);
     }
     :root[data-theme="dark"] .project .meta img {
             filter: brightness(1.2);

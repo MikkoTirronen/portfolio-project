@@ -12,6 +12,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderComponent("#about", About);
   renderComponent("#skills", Skills);
   renderComponent("#projects", Projects);
-  renderComponent("#projects2", Projects);
-  renderComponent("#contact", Projects); 
+
 });
