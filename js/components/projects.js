@@ -9,7 +9,7 @@ export function Projects() {
       github: "#",
     },
     {
-      title: "E-commerce Platform",
+      title: "E-Commerce Platform",
       description:
         "A scalable e-commerce platform with user authentication and product management.",
       icons: ["./assets/icons/csharp.png", "./assets/icons/react.png"],
@@ -53,7 +53,7 @@ export function Projects() {
             <div>
                 <button onclick="window.open('${
                   project.live
-                }', '_blank')">Live</button>
+                }', '_blank')" disabled>Live</button>
                 <button onclick="window.open('${
                   project.github
                 }', '_blank')">Github</button>
