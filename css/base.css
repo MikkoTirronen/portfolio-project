@@ -1,101 +1,150 @@
- /* base.css css global variables */
+/* =========================================================
+   Global Variables
+   ========================================================= */
 :root {
     --surface: #ffffff;
     --bg-overlay: rgba(255,255,255,0.65);
     --text: #111;
     --muted: #666;
     --accent: #f4b276;
+
     --max-width: 980px;
     --gutter: 24px;
     --radius: 14px;
     --card-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+
     --darkmode-color: #c0c0c6;
+
+    /* Contact Form Variables */
+    --field-bg: #ffffff;
+    --field-border: #ddd;
+    --field-focus: #f4b276;
+    --error: #d34a4a;
+
+    --button-text: #111;
 }
 
-/* Universal selector styles */
-* {box-sizing: border-box;}
+/* =========================================================
+   Dark Theme Overrides
+   ========================================================= */
+:root[data-theme="dark"] {
+    /* Derived theme colors */
+    --surface: #1f1f1f;
+    --text: #eaeaea;
+    --muted: #b3b3b3;
+    --bg-overlay: rgba(0, 0, 0, 0.92);
 
-html, body { 
+    /* Form variables */
+    --field-bg: rgba(255,255,255,0.08);
+    --field-border: rgba(255,255,255,0.18);
+    
+    --error: #ff7070;
+}
+
+/* =========================================================
+   Global
+   ========================================================= */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
     height: auto;
-    min-height: 100%; 
-    margin: 0; 
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
-    -webkit-font-smoothing:antialiased; 
-    -moz-osx-font-smoothing:grayscale;
-     color: var(--text);
-     background: transparent;
+    min-height: 100%;
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    color: var(--text);
+    background: transparent;
 }
 
-/* Canvas styles */
+/* =========================================================
+   Canvas Background Animation
+   ========================================================= */
 canvas#bg-animation {
-    position:fixed;
-    inset:0;
-    width:100vw;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
     height: 100vh;
     z-index: -3;
     pointer-events: none;
-    display:block;
+    display: block;
 }
 
-/* Overlay style */
+/* =========================================================
+   Glass Overlay Layer
+   ========================================================= */
 .bg-overlay {
     position: fixed;
-    inset:0;
+    inset: 0;
     z-index: -2;
     pointer-events: none;
     background: var(--bg-overlay);
-    /* backdrop-filter: blur(2px); */
 }
 
-/* Page container styles */
+/* =========================================================
+   Standard Page Container
+   ========================================================= */
 .page {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 28px var(--gutter) 120px;
-     
 }
 
-/* Dark theme overrides */
-    :root[data-theme="dark"] .card {
-        background: rgba(28, 28, 32, 0.92);
-    }
-    :root[data-theme="dark"] .hero::before {
-        background: rgba(0, 0, 0, 0.55);
-    }
-    :root[data-theme="dark"] .nav {
-        background: rgba(20, 20, 20, 0.92);
-        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
-    }
+/* =========================================================
+   Dark Mode Element Overrides
+   ========================================================= */
 
-    :root[data-theme="dark"] .project h3 {
-        color: var(--surface);
-    }
-    :root[data-theme="dark"] .project-card {
-      background: rgba(0, 0, 0, 0.3);
-      border-color: rgba(255,255,255,0.1);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.45);
-    }
-    
-     :root[data-theme="dark"] h1, a, p, h2, h3{
-        color: var(--surface);
-    }
-    :root[data-theme="dark"] .hero-subtitle{
-        color: var(--darkmode-color);
-    }
+/* Cards */
+:root[data-theme="dark"] .card {
+    background: rgba(28, 28, 32, 0.92);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.45);
+}
 
-    :root[data-theme="dark"] .card p, :root[data-theme="dark"] h2{
-        color: var(--surface);
-    }
-    :root[data-theme="dark"] .project-card h3{
-        color:var(--surface);
-    }
-    :root[data-theme="dark"] .project p {
-        color: var(--darkmode-color);
-    }
-    :root[data-theme="dark"] .project .meta img {
-            filter: brightness(1.2);
-    }
+/* Navbar */
+:root[data-theme="dark"] .nav {
+    background: rgba(20, 20, 20, 0.92);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+}
 
-    :root[data-theme="dark"] .hero::before {
-        background: rgba(0, 0, 0, 0.55);
-    }
+/* Hero overlay */
+.hero::before {
+    background: rgba(255,255,255,0.45);
+}
+:root[data-theme="dark"] .hero::before {
+    background: rgba(0,0,0,0.55);
+}
+
+/* Typography overrides */
+:root[data-theme="dark"] h1,
+:root[data-theme="dark"] h2,
+:root[data-theme="dark"] h3,
+:root[data-theme="dark"] p,
+:root[data-theme="dark"] a {
+    color: var(--text);
+}
+
+:root[data-theme="dark"] .hero-subtitle {
+    color: var(--darkmode-color);
+}
+
+/* Project Cards */
+:root[data-theme="dark"] .project-card {
+    background: rgba(0,0,0,0.3);
+    border-color: rgba(255,255,255,0.1);
+}
+
+:root[data-theme="dark"] .project-card h3 {
+    color: var(--darkmode-color);
+}
+
+:root[data-theme="dark"] .project p {
+    color: var(--darkmode-color);
+}
+
+:root[data-theme="dark"] .project .meta img {
+    filter: brightness(1.2);
+}
+
