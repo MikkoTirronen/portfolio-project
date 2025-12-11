@@ -6,6 +6,7 @@ import { Navbar } from "./components/navbar.js";
 import { Projects } from "./components/projects.js";
 import { Contact } from "./components/contact.js";
 import { Testamonials } from "./components/testamonials.js";
+import { Footer } from "./components/footer.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   renderComponent("#nav", Navbar);
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderComponent("#projects", Projects);
   renderComponent("#testamonials",Testamonials)
   renderComponent("#contact", Contact);
-
+  renderComponent("#footer", Footer);
   const message = document.getElementById("message");
   const messageCounter = document.getElementById("messageCounter");
 
