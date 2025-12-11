@@ -61,7 +61,7 @@ header {
 
 .nav-links a.active {
     background: linear-gradient(90deg, var(--accent), #e97181);
-    color: var(--text);
+    color: #111;
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
@@ -424,4 +424,58 @@ button[type="submit"]:active {
    ========================================================= */
 section {
     scroll-margin-top: 72px;
+}
+
+
+/* =========================================================
+   Testamonials Section
+   ========================================================= */
+
+/* Layout */
+.testimonials-section {
+  padding: 4rem 0;
+  background: #f8f9fc;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Grid */
+.testimonials-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Card */
+.testimonial-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  color: #333;
 }
