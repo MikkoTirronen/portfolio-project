@@ -55,7 +55,6 @@ html, body {
     font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
     color: var(--text);
     background: transparent;
 }
@@ -121,8 +120,7 @@ canvas#bg-animation {
 :root[data-theme="dark"] h1,
 :root[data-theme="dark"] h2,
 :root[data-theme="dark"] h3,
-:root[data-theme="dark"] p,
-:root[data-theme="dark"] a {
+:root[data-theme="dark"] p {
     color: var(--text);
 }
 
@@ -148,3 +146,24 @@ canvas#bg-animation {
     filter: brightness(1.2);
 }
 
+[data-theme="dark"] .testimonials-section {
+  background: #0e0f13;
+  color: #e5e5e5;
+}
+
+[data-theme="dark"] .testimonial-card {
+  background: #1a1b20;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .testimonial-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+[data-theme="dark"] .testimonial-author {
+  color: #f0f0f0;
+}
+
+[data-theme="dark"] .section-title {
+  color: #ffffff;
+}
