@@ -34,14 +34,11 @@ export function Projects() {
     },
   ];
 
-  // Create project container
-  const projectContainer = document.createElement("div");
-  projectContainer.classList.add("projects-container");
 
-  // Insert mapped project cards into the container
-  return `
-    <h2>Projects</h2>
-    ${(projectContainer.innerHTML = projects
+ return `
+  <h2>Projects</h2>
+  <div class="projects-container">
+    ${projects
       .map(
         (project) => `
         <div class="project-card">
@@ -51,15 +48,13 @@ export function Projects() {
             </div>
             <p>${project.description}</p>
             <div>
-                <button onclick="window.open('${
-                  project.live
-                }', '_blank')" disabled>Live</button>
-                <button onclick="window.open('${
-                  project.github
-                }', '_blank')">Github</button>
+                <button onclick="window.open('${project.live}', '_blank')" disabled>Live</button>
+                <button onclick="window.open('${project.github}', '_blank')">Github</button>
             </div>
         </div>
-        `
+      `
       )
-      .join(""))}`;
+      .join("")}
+  </div>
+`;
 }
