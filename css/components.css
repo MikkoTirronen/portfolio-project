@@ -183,8 +183,9 @@ header {
    SKILLS SECTION
    ========================================================= */
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    
     gap: 16px;
 }
 
@@ -192,11 +193,12 @@ header {
     display: flex;
     gap: 12px;
     align-items: center;
+    min-width: 160px;
     padding: 10px 12px;
     border-radius: 10px;
-    background: #f6f6f6;
+    background: #141417;
     font-weight: 600;
-    color: #222;
+    color: var(--text);
     box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
@@ -394,7 +396,7 @@ button[type="submit"]:active {
 #successCard h2 {
     font-size: 1.6rem;
     margin-bottom: 12px;
-    color: var(--accent);
+    color: var(--text);
 }
 
 #successCard p {
@@ -406,7 +408,7 @@ button[type="submit"]:active {
 #closeSuccess {
     padding: 12px 20px;
     background: var(--button-bg);
-    color: var(--button-text);
+    color: var(--text);
     border-radius: var(--radius);
     border: none;
     cursor: pointer;
@@ -444,14 +446,15 @@ section {
 }
 
 .section-title {
-  text-align: center;
+  text-align: left;
   font-size: 2.5rem;
   margin-bottom: 2.5rem;
 }
 
 /* Grid */
 .testimonials-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: nowrap;
   gap: 2rem;
 }
 
@@ -473,11 +476,12 @@ section {
   font-style: italic;
   margin-bottom: 1rem;
   line-height: 1.6;
+  color: var(--muted);
 }
 
 .testimonial-author {
   font-weight: bold;
-  color: #333;
+  color: var(--muted);
 }
 
 /* =========================================================
