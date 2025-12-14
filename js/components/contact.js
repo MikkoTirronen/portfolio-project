@@ -27,7 +27,7 @@ export function Contact() {
 
   <!-- Hidden success card -->
   <div id="successCard">
-    <h1>Message Received</h1>
+    <h2>Message Received</h2>
     <p>Your message has been successfully sent.  
        I’ll get back to you as soon as possible.</p>
 
