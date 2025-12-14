@@ -7,6 +7,7 @@ import { Projects } from "./components/projects.js";
 import { Contact } from "./components/contact.js";
 import { Testamonials } from "./components/testamonials.js";
 import { Footer } from "./components/footer.js";
+import { AddCharacterCounter, updateCounter } from "./animations/character-counter.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   renderComponent("#nav", Navbar);
@@ -14,19 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
   renderComponent("#about", About);
   renderComponent("#skills", Skills);
   renderComponent("#projects", Projects);
-  renderComponent("#testamonials",Testamonials)
+  renderComponent("#testamonials", Testamonials);
   renderComponent("#contact", Contact);
   renderComponent("#footer", Footer);
-  const message = document.getElementById("message");
-  const messageCounter = document.getElementById("messageCounter");
 
-  message.addEventListener("input", () => {
-    const max = message.getAttribute("maxlength");
-    const length = message.value.length;
+  AddCharacterCounter();
 
-    messageCounter.textContent = `${length} / ${max}`;
-  });
-  
   document
     .getElementById("contactForm")
     .addEventListener("submit", function (e) {
@@ -70,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         form.style.display = "none";
         success.classList.add("show");
+        success.style.display = "block";
         form.reset;
       }, 300);
     });
@@ -84,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.style.display = "block";
     form.reset();
+    updateCounter();
     setTimeout(() => (form.style.opacity = "1"), 10);
   });
 });
