@@ -1,0 +1,28 @@
+Passing Grade:
+
+    * Portrait photo                                                -done
+    * A button to download CV                   
+    * A Navbar                                                      -done
+    * Social Media                                                  -done    
+    * Skills section                                                -done
+    * Portfolio section with projects                               -done
+    * Testamonials                                                  -done
+    * A Contact form                                                -done
+    * A Footer
+
+    Requirements:
+        - thorough testing
+        - input verification                                        -done
+        - best practices good class names, dry                      -done
+        - readme file with all methods and principals
+        - display flex/grid                                         -done
+
+Extra Challenge:
+    - git commits and feature branches with relevent messages       -done 
+    - warning messages when wrong inputs                            -done
+    - good UX/UI
+    - Professional- documentation - testing
+    - Get the weather from a weather api
+    - Responsive
+    - A WCAG report
+        
