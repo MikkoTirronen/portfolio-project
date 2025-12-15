@@ -39,7 +39,9 @@ header {
 .nav-left img {
     border-radius: var(--radius);
 }
-
+#darklogo{
+    display:none;
+}
 .brand {
     font-family: "JetBrains Mono", monospace;
     font-weight: 700;

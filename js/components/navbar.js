@@ -1,11 +1,13 @@
 export function Navbar({ children }) {
   return `
           <img
-            src="./assets/logo-1.png"
+            id="logo"
+            src="./assets/no-margin.png"
             alt="Mikko Tirronen"
             width="auto"
             height="36"
           />
+          <img id="darklogo" src="./assets/no-margin-dark.png" alt="Mikko Tirronen" width="auto" height="36" />
           <div id="navLinks" class="nav-links" role="menubar" aria-label="Sections">
             <a href="#about" data-link class="active">About</a>
             <a href="#skills" data-link>Skills</a>
