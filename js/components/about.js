@@ -3,7 +3,7 @@ export function About() {
   return `
         <div class="about-text">
             <h2>About</h2>
-            <div class="about-grid">
+            <div class="about-container">
                 <div class="about-photo">
                     <img src="./assets/profile-square.png" alt="Profile photo" />
                 </div>
