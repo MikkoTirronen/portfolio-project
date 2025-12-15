@@ -2,22 +2,23 @@ export function Contact() {
   return `
   <h2>Contact Me</h2>
     <div id="contactWrapper">
-  <form id="contactForm" novalidate>
+  <form id="contactForm" action="https://formsubmit.co/3d14bd33977bc7783400307772e4d54e" method="POST" novalidate>
+  <input type="hidden" name="_captcha" value="false">
     <div class="field">
       <label>Name</label>
-      <input type="text" id="name">
+      <input type="text" id="name" name="name">
       <span class="error"></span>
     </div>
 
     <div class="field">
       <label>Email</label>
-      <input type="email" id="email">
+      <input type="email" id="email" name="email">
       <span class="error"></span>
     </div>
 
     <div class="field">
   <label>Message (optional)</label>
-  <textarea id="message" maxlength="800"></textarea>
+  <textarea id="message" name="message" maxlength="800"></textarea>
   <div class="char-counter" id="messageCounter">0 / 800</div>
   <span class="error"></span>
 </div>
