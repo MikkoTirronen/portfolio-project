@@ -29,7 +29,7 @@
    ========================================================= */
 :root[data-theme="dark"] {
     /* Derived theme colors */
-    --surface: #1f1f1f;
+    --surface: #141417;
     --text: #eaeaea;
     --muted: #b3b3b3;
     --bg-overlay: rgba(0, 0, 0, 0.92);
@@ -130,7 +130,7 @@ canvas#bg-animation {
 
 /* Project Cards */
 :root[data-theme="dark"] .project-card {
-    background: rgba(0,0,0,0.3);
+    background: #0e0f13;
     border-color: rgba(255,255,255,0.1);
 }
 
@@ -151,9 +151,10 @@ canvas#bg-animation {
   color: #e5e5e5;
 }
 
-[data-theme="dark"] .testimonial-card {
-  background: #1a1b20;
+[data-theme="dark"] .testimonial-card{
+  background: #141417;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="dark"] .testimonial-card:hover {
@@ -164,6 +165,4 @@ canvas#bg-animation {
   color: #f0f0f0;
 }
 
-[data-theme="dark"] .section-title {
-  color: #ffffff;
-}
+

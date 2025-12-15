@@ -56,7 +56,7 @@ header {
     font-weight: 500;
     color: var(--muted);
     text-decoration: none;
-    transition: background 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .nav-links a.active {
@@ -183,8 +183,9 @@ header {
    SKILLS SECTION
    ========================================================= */
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    
     gap: 16px;
 }
 
@@ -192,11 +193,12 @@ header {
     display: flex;
     gap: 12px;
     align-items: center;
+    min-width: 160px;
     padding: 10px 12px;
     border-radius: 10px;
-    background: #f6f6f6;
+    background: var(--surface);
     font-weight: 600;
-    color: #222;
+    color: var(--text);
     box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
@@ -208,24 +210,43 @@ header {
 /* =========================================================
    PROJECTS SECTION
    ========================================================= */
+    #projects{
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+    }
+    #projects h2 {
+        display: block;
+        padding: 20px 40px;
+        background: var(--surface);
+        border-radius: 14px;
+        opacity: .92;
+        color: var(--text);
+    }
+
+    #projects .card{
+        padding: 0;
+       
+    }
+
 .projects-container {
     max-width: 1100px;
-    margin: auto;
+    /* margin: auto; */
     display: grid;
     gap: 20px;
-    padding: 20px;
+    /* padding: 20px; */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .project-card {
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.912);
     backdrop-filter: blur(12px);
     border-radius: 16px;
-    padding: 24px;
-    border: 1px solid rgba(255,255,255,0.15);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    padding: 30px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.829);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.829);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .project-icons img {
@@ -384,6 +405,7 @@ button[type="submit"]:active {
     opacity: 0;
     transition: opacity 0.35s ease;
     text-align: center;
+    border: 2px solid var(--accent);
 }
 
 #successCard.show {
@@ -394,7 +416,7 @@ button[type="submit"]:active {
 #successCard h2 {
     font-size: 1.6rem;
     margin-bottom: 12px;
-    color: var(--accent);
+    color: var(--text);
 }
 
 #successCard p {
@@ -406,7 +428,7 @@ button[type="submit"]:active {
 #closeSuccess {
     padding: 12px 20px;
     background: var(--button-bg);
-    color: var(--button-text);
+    color: var(--text);
     border-radius: var(--radius);
     border: none;
     cursor: pointer;
@@ -444,14 +466,15 @@ section {
 }
 
 .section-title {
-  text-align: center;
+  text-align: left;
   font-size: 2.5rem;
   margin-bottom: 2.5rem;
 }
 
 /* Grid */
 .testimonials-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: nowrap;
   gap: 2rem;
 }
 
@@ -473,11 +496,12 @@ section {
   font-style: italic;
   margin-bottom: 1rem;
   line-height: 1.6;
+  color: var(--muted);
 }
 
 .testimonial-author {
   font-weight: bold;
-  color: #333;
+  color: var(--muted);
 }
 
 /* =========================================================
