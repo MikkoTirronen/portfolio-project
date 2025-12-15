@@ -1,7 +1,7 @@
 export function Navbar({ children }) {
   return `
           <img
-            src="./assets/whitelines-logo.png"
+            src="./assets/logo-1.png"
             alt="Mikko Tirronen"
             width="auto"
             height="36"

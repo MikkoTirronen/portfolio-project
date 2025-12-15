@@ -62,5 +62,6 @@
     flex: 0 0 auto;
     min-width: 140px;
     text-align: center;
+    margin: 0;
   }
 }
