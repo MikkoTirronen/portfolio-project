@@ -1,7 +1,6 @@
-export function Testamonials() {
+export function Testimonials() {
   return `        
-    
-            <h2>What Clients Say</h2>
+            <h2>Testimonials</h2>
 
             <div class="testimonials-grid">
                 <div class="testimonial-card">
