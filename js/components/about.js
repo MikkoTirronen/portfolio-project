@@ -20,6 +20,13 @@ export function About() {
                         generative background is a small creative playground I use to
                         test ideas.
                     </p>
+                    <div class="button-container">
+                        <a href="./assets/coming-soon.pdf" download>
+                            <button type="button" class="btn">
+                                Download CV
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

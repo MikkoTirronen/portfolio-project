@@ -179,8 +179,17 @@ header {
   display: block;
   justify-self: start; /* picture on the left initially */
 }
-
-
+.btn{
+    align-self: center;
+    margin: 0;
+    padding: 10px 50px;
+}
+.button-container{
+  display:flex;
+  width:100%;
+  justify-content: center;
+  margin-top: 30px;
+}
 /* =========================================================
    SKILLS SECTION
    ========================================================= */
