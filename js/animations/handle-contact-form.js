@@ -1,85 +1,137 @@
 import { updateCounter } from "./character-counter.js";
 
 export const HandleContactForm = () => {
-    document
-    .getElementById("contactForm")
-    .addEventListener("submit", async function (e) {
-      e.preventDefault();
+  const form = document.getElementById("contactForm");
+  const success = document.getElementById("successCard");
+  const closeBtn = document.getElementById("closeSuccess");
 
-      let valid = true;
+  if (!form || !success || !closeBtn) return;
 
-      // Reset errors
-      document.querySelectorAll(".error").forEach((err) => {
-        err.textContent = "";
-        err.classList.remove("show");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  /* -----------------------------
+     Helper functions
+  ----------------------------- */
+
+  const showError = (input, message) => {
+    const error = document.getElementById(`${input.id}-error`);
+    if (!error) return;
+
+    input.setAttribute("aria-invalid", "true");
+    error.textContent = message;
+    error.classList.add("show");
+  };
+
+  const clearError = (input) => {
+    const error = document.getElementById(`${input.id}-error`);
+    if (!error) return;
+
+    input.removeAttribute("aria-invalid");
+    error.textContent = "";
+    error.classList.remove("show");
+  };
+
+  const clearAllErrors = () => {
+    [nameInput, emailInput].forEach(clearError);
+  };
+
+  /* -----------------------------
+     Submit handler
+  ----------------------------- */
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let valid = true;
+
+    clearAllErrors();
+
+    if (nameInput.value.trim() === "") {
+      showError(nameInput, "Name is required.");
+      valid = false;
+    }
+
+    if (!emailRegex.test(emailInput.value.trim())) {
+      showError(emailInput, "Enter a valid email address.");
+      valid = false;
+    }
+
+    if (!valid) {
+      const firstInvalid = document.querySelector("[aria-invalid='true']");
+      firstInvalid?.focus();
+      return;
+    }
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" }
       });
 
-      const name = document.getElementById("name");
-      const email = document.getElementById("email");
-    //   const message = document.getElementById("message");
-
-      // Email regex
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-      if (name.value.trim() === "") {
-        name.nextElementSibling.textContent = "Name is required.";
-        name.nextElementSibling.classList.add("show");
-        valid = false;
+      if (!response.ok) {
+        throw new Error("Form submission failed");
       }
 
-      if (!emailRegex.test(email.value.trim())) {
-        email.nextElementSibling.textContent = "Enter a valid email.";
-        email.nextElementSibling.classList.add("show");
-        valid = false;
+      /* -----------------------------
+         Success state
+      ----------------------------- */
+
+      form.setAttribute("aria-hidden", "true");
+
+      if (!prefersReducedMotion) {
+        form.style.transition = "opacity 0.3s ease";
+        form.style.opacity = "0";
+        setTimeout(() => (form.style.display = "none"), 300);
+      } else {
+        form.style.display = "none";
       }
 
-      if (!valid) return;
+      success.hidden = false;
+      success.removeAttribute("aria-hidden");
 
-      const form = document.getElementById("contactForm");
-      const success = document.getElementById("successCard");
-      const formData = new FormData(form);
+      closeBtn.focus();
 
-      try {
-        const response = await fetch(form.action, {
-          method: "POST",
-          body: formData,
-          headers: {
-            Accept: "application/json", // Prevent redirect
-          },
-        });
+      form.reset();
+      updateCounter();
 
-        if (response.ok) {
-          // Fade out form
-          form.style.transition = "opacity 0.3s";
-          form.style.opacity = "0";
+    } catch (err) {
+      alert("There was an error submitting the form. Please try again.");
+      console.error(err);
+    }
+  };
 
-          setTimeout(() => {
-            form.style.display = "none";
-            success.style.display = "block";
-            success.classList.add("show");
-            form.reset();
-          }, 300);
-        } else {
-          alert("There was an error submitting the form.");
-          console.error("Form submission failed:", response.statusText);
-        }
-      } catch (error) {
-        console.error("Error submitting form:", error);
-        alert("There was an error submitting the form.");
-      }
-    });
+  /* -----------------------------
+     Close success handler
+  ----------------------------- */
 
-  // Handle Close button
-  document.getElementById("closeSuccess").addEventListener("click", () => {
-    const form = document.getElementById("contactForm");
-    const success = document.getElementById("successCard");
-
-    success.classList.remove("show");
-    success.style.display = "none";
+  const handleClose = () => {
+    success.hidden = true;
+    success.setAttribute("aria-hidden", "true");
 
     form.style.display = "block";
+    form.removeAttribute("aria-hidden");
+
     form.reset();
     updateCounter();
-    setTimeout(() => (form.style.opacity = "1"), 10);
-  });
-}
+
+    nameInput.focus();
+  };
+
+  /* -----------------------------
+     Event listeners (safe rebind)
+  ----------------------------- */
+
+  form.removeEventListener("submit", handleSubmit);
+  closeBtn.removeEventListener("click", handleClose);
+
+  form.addEventListener("submit", handleSubmit);
+  closeBtn.addEventListener("click", handleClose);
+};
