@@ -5,6 +5,7 @@ export const updateCounter = () => {
   messageCounter.textContent = `${message.value.length}/${message.maxLength}`;
 };
 
-export function AddCharacterCounter() {
+export const AddCharacterCounter = () => {
+  const message = document.getElementById("message");
   message.addEventListener("input", updateCounter);
-}
+};
