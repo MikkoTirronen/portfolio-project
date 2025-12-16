@@ -59,6 +59,16 @@ html, body {
     background: transparent;
 }
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* =========================================================
    Canvas Background Animation
    ========================================================= */
