@@ -1,10 +1,26 @@
-//Hero functional component
+import { GetWeather } from "../animations/weather.js";
 
 export function Hero() {
-  return ` 
-        <div class="hero-overlay">
-            <h1 class="hero-title" aria-describedby="hero-subtitle">Mikko Tirronen</h1>
-            <p class="hero-subtitle">Junior Software Developer</p>
-        <div>
-    `;
+  requestAnimationFrame(GetWeather);
+
+  return `
+
+  <div class="weather-widget" aria-label="Weather in Stockholm">
+  <div class="weather-icon-wrapper">
+    <div id="weatherIcon"></div>
+  </div>
+
+  <div class="weather-text">
+    <span class="weather-temp">Stockholm</span>
+    <span class="weather-temp" id="weatherTemp">25°C</span>
+    <span class="weather-desc" id="weatherDesc">Sunny</span>
+  </div>
+  </div>
+  <div class="hero-content">
+  <h1 id="hero-heading" class="hero-title">Mikko Tirronen</h1>
+  <p class="hero-subtitle">Junior Software Developer</p>
+  </div>
+  `;
 }
+{/* 
+ */}
