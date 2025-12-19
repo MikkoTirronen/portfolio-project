@@ -15,17 +15,18 @@
       <nav id="nav" class="nav" aria-label="Main navigation"></nav>
     </header>
     <main id="page">
-      <section id="hero" class="hero"></section>
-      <section id="about" class="card"></section>
-      <section id="skills" class="card"></section>
-      <section id="projects" class="card"></section>
-      <section id="testimonials" class="card"></section>
-      <section id="contact" class="card"></section>
+      <section id="hero" class="hero" aria-labelledby="hero-heading"></section>
+      <section id="about" class="card" aria-labelledby="about-heading"></section>
+      <section id="skills" class="card skills-section" aria-labelledby="skills-heading" ></section>
+      <section id="projects" class="card skills-section" aria-labelledby="projects-heading"></section>
+      <section id="testimonials" class="card" aria-labelledby="testimonials-heading"></section>
+      <section id="contact" class="card" aria-labelledby="contact-heading"></section>
     </main>
-    <footer id="footer" class="card" role="contentinfo"></footer>
+    <footer id="footer" class="card" role="contentinfo" aria-label="Footer Section"></footer>
   </body>
   <script src="./js/animations/background.js" type="module" defer></script>
   <script type="module" src="./js/app.js" defer></script>
   <script src="./js/animations/nav-scroll-animation.js"></script>
   <script src="./js/animations/theme-toggle.js" defer></script>
+  
 </html>
