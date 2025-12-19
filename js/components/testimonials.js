@@ -1,7 +1,8 @@
 export function Testimonials() {
   return `        
- <section id="testimonials">
-  <h2>Testimonials</h2>
+ 
+  
+  <h2 id="testimonials-heading">Testimonials</h2>
 
   <div class="testimonials-grid">
     <article class="testimonial-card">
@@ -25,8 +26,7 @@ export function Testimonials() {
       <footer class="testimonial-author">— Chris M., Founder</footer>
     </article>
   </div>
-</section>
 
-    
+  
     `;
 }

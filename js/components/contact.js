@@ -1,7 +1,7 @@
 export function Contact() {
   return `
     <h2 id="contact-heading">Contact Me</h2>
-
+    <p class="section-subtitle">Interested in working together or discussing a project? Use the form below to email me or alternatively through social media.</p>
     <div id="contactWrapper">
       <form
         id="contactForm"
