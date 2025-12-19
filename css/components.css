@@ -5,7 +5,9 @@
 /* =========================================================
    NAVIGATION
    ========================================================= */
-header {
+
+
+   header {
     position: sticky;
     top: 0;
     z-index: 999;
@@ -20,10 +22,11 @@ header {
     gap: 12px;
     width: 100%;
     padding: 10px var(--gutter);
-    background: var(--surface);
+    background: var(--bg-primary);
     border-radius: var(--radius);
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     backdrop-filter: blur(6px);
+    opacity: 1;
 }
 .nav-toggle{
     display:none;
@@ -57,7 +60,7 @@ header {
 
 .nav-links a {
     padding: 8px 12px;
-    border-radius: 8px;
+    border-radius: var(--radius);
     font-weight: 500;
     color: var(--muted);
     text-decoration: none;
@@ -72,7 +75,7 @@ header {
 
 .theme-toggle {
     padding: 8px;
-    border-radius: 8px;
+    border-radius: var(--radius);
     background: transparent;
     border: 1px solid rgba(0,0,0,0.06);
     cursor: pointer;
@@ -95,6 +98,9 @@ header {
     border-radius: var(--radius);
 }
 
+.hero-content{
+  z-index: 1;
+}
 .hero::before {
     content: "";
     position: absolute;
@@ -118,7 +124,7 @@ header {
     font-size: 3.2rem;
     font-weight: 700;
     margin: 0;
-    color: var(--text);
+    color: var(--text-primary);
     letter-spacing: -1px;
 }
 
@@ -126,6 +132,8 @@ header {
     margin-top: 0.6rem;
     font-size: 1.1rem;
     font-weight: 500;
+    opacity: .7;
+    letter-spacing: 0.02rem;
     color: var(--muted);
 }
 
@@ -133,26 +141,25 @@ header {
    CARDS
    ========================================================= */
 .card {
-    background: var(--surface);
+    background: var(--bg-primary);
     border-radius: var(--radius);
     box-shadow: var(--card-shadow);
     padding: 40px;
     margin: 36px 0;
-    will-change: opacity;
-    opacity: 0;
-    transition: opacity 420ms ease;
-}
-
-.card.inview {
-    opacity: 1;
+   
 }
 
 .card h2 {
     font-family: "JetBrains Mono", monospace;
     font-weight: 600;
-    margin: 0 0 16px;
-    font-size: 20px;
-    color: var(--text);
+    margin: 0 0 16px; 
+    color: var(--text-primary);
+    font-size: 2.0rem;
+    text-transform: uppercase;
+}
+
+#about .card{
+  opacity: 1;
 }
 
 /* =========================================================
@@ -161,16 +168,18 @@ header {
 .about-container {
   display: grid;
   grid-template-columns: 320px 1fr; /* picture + text */
-  gap: 18px;
+ 
   align-items: center;
+  opacity: 1;
 }
 
 .about-text p {
     text-align: left;
     margin: 0 0 12px;
-    color: var(--text);
-    line-height: 1.6;
+    color: var(--text-primary);
+    line-height: 1.7;
     font-size: 15px;
+    
 }
 
 .about-container img {
@@ -191,68 +200,92 @@ header {
   justify-content: center;
   margin-top: 30px;
 }
+
 /* =========================================================
    SKILLS SECTION
    ========================================================= */
-#skills {
-  padding: 40px 20px;
-  background: var(--surface);
+.skills-section {
+  background: var(--skills-bg);
+  color: var(--skills-text);
+  border-radius: 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  
+}
+
+.section-subtitle {
+  color: var(--text-primary);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 20px;
-  max-width: 900px;
-  margin: auto;
-  justify-items: center;
-  align-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
 }
 
-.skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.skill-card {
+  background: var(--skills-card-bg);
+  border: 1px solid var(--skills-border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  contain: layout paint;
 }
 
-.skill img {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 8px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-  transition: transform 0.2s ease;
+.skill-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary)
 }
 
-.skill img:hover {
-  transform: scale(1.15);
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.skill span {
-  font-size: 0.95rem;
-  color: var(--text);
+.skill-card li {
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  color: var(--muted);
 }
+
+.skill-card strong {
+  color: var(--text-primary);
+}
+
 
 /* =========================================================
    PROJECTS SECTION
    ========================================================= */
-    #projects{
-        background: transparent;
-        box-shadow: none;
-        padding: 0;
-    }
-    #projects h2 {
-        display: block;
+#projects{
+  display: flex;
+  flex-direction: column;
+  
+} 
+        /* background: transparent; */
+        /* box-shadow: none; */
+        /* padding: 0; */
+ 
+     /* #projects h2 {
+        
         padding: 20px 40px;
-        background: var(--surface);
-        border-radius: 14px;
+        background: var(--bg-primary);
+        border-radius: var(--radius);
         opacity: .92;
-        color: var(--text);
-    }
+        color: var(--text-primary);
+        box-shadow: var(--card-shadow);
+    } */
 
-    #projects .card{
+    /* #projects .card{
         padding: 0;
-    }
+    } */
 
 .projects-container {
     display: grid;
@@ -262,13 +295,14 @@ header {
 
 .project-card {
     background: rgba(255, 255, 255, 0.912);
-    backdrop-filter: blur(12px);
-    border-radius: 16px;
+    /* backdrop-filter: blur(12px); */
+    border-radius: var(--radius);
     padding: 30px 40px;
     border: 1px solid rgba(255, 255, 255, 0.829);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.829);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     /* margin-bottom: 10px; */
+    /* contain: layout paint; */
 }
 
 .project-icons img {
@@ -276,24 +310,25 @@ header {
     height: 38px;
     margin-right: 10px;
     filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));
-    transition: transform 0.2s ease;
+    /* transition: transform 0.2s ease; */
 }
 
-.project-icons img:hover {
+/* .project-icons img:hover {
     transform: scale(1.15);
-}
+} */
 
 .project-card h3 {
     margin-bottom: 20px;
-    color: var(--text);
+    color: var(--text-primary);
 }
 .project-links{
   display: flex;
 }
 .project-card p {
-    color: var(--text);
+    color: var(--text-primary);
     margin: 15px 0;
     line-height: 1.4;
+    
 }
 
 /* =========================================================
@@ -313,7 +348,10 @@ header {
     transition: 0.25s ease;
     text-decoration: none;
 }
-
+.btn.disabled {
+  background: none;
+  background-color: #797878;
+}
 .btn:hover, .toggle-hover:hover {
     background: linear-gradient(135deg, #0056d6, #003fa4);
     transform: translateY(-3px);
@@ -328,7 +366,7 @@ button:active {
    CONTACT FORM
    ========================================================= */
 #contactForm {
-    background: var(--surface);
+    background: var(--bg-primary);
     padding: 24px;
     border-radius: var(--radius);
     box-shadow: var(--card-shadow);
@@ -357,7 +395,7 @@ textarea {
     border-radius: var(--radius);
     background: var(--field-bg);
     font-size: 1rem;
-    color: var(--text);
+    color: var(--text-primary);
     transition: border 0.2s, box-shadow 0.2s, background-color 0.2s;
     resize: vertical;
 }
@@ -409,7 +447,7 @@ button[type="submit"] {
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
-    transition: background 0.2s ease, transform 0.15s ease;
+    transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 button[type="submit"]:active {
@@ -420,7 +458,7 @@ button[type="submit"]:active {
    SUCCESS CARD
    ========================================================= */
 #successCard {
-    background: var(--surface);
+    background: var(--bg-primary);
     padding: 32px;
     border-radius: var(--radius);
     box-shadow: var(--card-shadow);
@@ -441,7 +479,7 @@ button[type="submit"]:active {
 #successCard h2 {
     font-size: 1.6rem;
     margin-bottom: 12px;
-    color: var(--text);
+    color: var(--text-primary);
 }
 
 #successCard p {
@@ -453,7 +491,7 @@ button[type="submit"]:active {
 #closeSuccess {
     padding: 12px 20px;
     background: var(--button-bg);
-    color: var(--text);
+    color: var(--text-primary);
     border-radius: var(--radius);
     border: none;
     cursor: pointer;
@@ -507,8 +545,8 @@ section {
   flex: 1 1 280px;
   background: #ffffff;
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.255);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 

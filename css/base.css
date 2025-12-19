@@ -2,26 +2,30 @@
    Global Variables
    ========================================================= */
 :root {
-    --surface: #ffffff;
-    --bg-overlay: rgba(255,255,255,0.65);
-    --text: #111;
+   --bg-primary: #ffffff;
+    --bg-overlay: rgba(169, 167, 167, 0.889);
+    --text-primary: #111;
     --muted: #666;
     --accent: #f4b276;
-
     --max-width: 980px;
     --gutter: 24px;
     --radius: 14px;
-    --card-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-
+    --card-shadow: 0 8px 25px rgba(0, 0, 0, 0.829);
     --darkmode-color: #c0c0c6;
-
     /* Contact Form Variables */
     --field-bg: #ffffff;
     --field-border: #ddd;
     --field-focus: #f4b276;
     --error: #d34a4a;
-
     --button-text: #111;
+}
+
+:root {
+  --skills-bg: #ffffff;
+  --skills-card-bg: #f9f9f9;
+  --skills-text: #1a1a1a;
+  --skills-muted: #6b6b6b;
+  --skills-border: rgba(255,255,255,0.04);
 }
 
 /* =========================================================
@@ -29,16 +33,17 @@
    ========================================================= */
 :root[data-theme="dark"] {
     /* Derived theme colors */
-    --surface: #141417;
-    --text: #eaeaea;
+   --bg-primary: #141417;
+    --text-primary: #eaeaea;
     --muted: #b3b3b3;
     --bg-overlay: rgba(0, 0, 0, 0.92);
-
+    --card-shadow: 0 8px 25px rgb(94, 93, 93);
     /* Form variables */
     --field-bg: rgba(255,255,255,0.08);
     --field-border: rgba(255,255,255,0.18);
-    
     --error: #ff7070;
+
+    --skills-card-bg: #252525;
 }
 
 /* =========================================================
@@ -49,24 +54,30 @@
 }
 
 html, body {
+    
     height: auto;
     min-height: 100%;
     margin: 0;
     font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: var(--text);
+    color: var(--text-primary);
     background: transparent;
 }
 
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-}
+.skip-link, .skip-link:visited {
+    font-size: 1.2rem;
+    position: absolute;
+    background-color: var(--bg-primary);
+    top: -40px;
+    left: 0;
+    columns: var(--text-primary);
+    text-decoration: none;
+}   
 
 .skip-link:focus {
   top: 0;
+  background-color: var(--bg-overlay);
 }
 
 /* =========================================================
@@ -136,13 +147,17 @@ canvas#bg-animation {
 :root[data-theme="dark"] h2,
 :root[data-theme="dark"] h3,
 :root[data-theme="dark"] p {
-    color: var(--text);
+    color: var(--text-primary);
 }
 
 :root[data-theme="dark"] .hero-subtitle {
     color: var(--darkmode-color);
 }
-
+:root[data-theme="dark"] .skill-card {
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    0 1px 0 rgba(255, 255, 255, 0.04);
+}
 /* Project Cards */
 :root[data-theme="dark"] .project-card {
     background: #0e0f13;
@@ -180,4 +195,15 @@ canvas#bg-animation {
   color: #f0f0f0;
 }
 
+/* 
+@media (prefers-reduced-motion: reduce) {
+  .animated-background {
+    animation: none !important;
+  }
+} */
 
+button:focus,
+a:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}

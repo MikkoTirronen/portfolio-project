@@ -1,39 +1,46 @@
 export function Skills() {
   return `
-        <h2>Skills</h2>
+  <h2 id="skills-heading" class="section-title">Skills</h2>
+  <p class="section-subtitle">
+    Technologies I’ve used in projects and enjoy working with.
+  </p>
+
   <div class="skills-grid">
-    <div class="skill">
-      <img src="./assets/icons/javascript.jpeg" alt="JavaScript icon" />
-      <span>JavaScript</span>
+    <div class="skill-card">
+      <h3>Frontend</h3>
+      <ul>
+        <li><strong>React</strong> – Hooks, component-driven UI</li>
+        <li><strong>TypeScript</strong> – Type-safe applications</li>
+        <li><strong>JavaScript (ES6+)</strong> – Async patterns</li>
+        <li><strong>HTML & CSS</strong> – Responsive, accessible layouts</li>
+      </ul>
     </div>
-    <div class="skill">
-      <img src="./assets/icons/typescript.png" alt="TypeScript icon" />
-      <span>TypeScript</span>
+
+    <div class="skill-card">
+      <h3>Backend</h3>
+      <ul>
+        <li><strong>Node.js</strong> – REST APIs, authentication</li>
+        <li><strong>C# / .NET</strong> – API development, clean architecture</li>
+      </ul>
     </div>
-    <div class="skill">
-      <img src="./assets/icons/node.jpeg" alt="Node.js icon" />
-      <span>Node.js</span>
+
+    <div class="skill-card">
+      <h3>Databases</h3>
+      <ul>
+        <li><strong>PostgreSQL</strong> – Relational design, queries</li>
+        <li><strong>MongoDB</strong> – Document modeling</li>
+      </ul>
     </div>
-    <div class="skill">
-      <img src="./assets/icons/react.png" alt="React icon" />
-      <span>React</span>
-    </div>
-    <div class="skill">
-      <img src="./assets/icons/mongodb.png" alt="MongoDB icon" />
-      <span>MongoDB</span>
-    </div>
-    <div class="skill">
-      <img src="./assets/icons/postgres.png" alt="Postgres icon" />
-      <span>Postgres</span>
-    </div>
-    <div class="skill">
-      <img src="./assets/icons/csharp.png" alt="C# icon" />
-      <span>C#</span>
-    </div>
-    <div class="skill">
-      <img src="./assets/icons/azure.jpeg" alt="Azure icon" />
-      <span>Azure</span>
+
+    <div class="skill-card">
+      <h3>Cloud & Tools</h3>
+      <ul>
+        <li><strong>Azure</strong> – App Services, deployments</li>
+        <li><strong>Git & GitHub</strong> – Version control, PRs</li>
+      </ul>
     </div>
   </div>
+
+
         `;
 }
