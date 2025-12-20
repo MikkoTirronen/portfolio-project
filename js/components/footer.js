@@ -20,9 +20,8 @@ export function Footer() {
       <nav class="footer-socials" aria-label="Social links">
         <h4 class="footer-title">Social</h4>
         <ul>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">GitHub</a></li>
-          <li><a href="#">Twitter</a></li>
+          <li><a href="https://www.linkedin.com/in/mikko-tirronen-1306b6223/">LinkedIn</a></li>
+          <li><a href="https://github.com/mikkotirronen">GitHub</a></li>
         </ul>
       </nav>
 

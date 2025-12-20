@@ -644,22 +644,3 @@ section {
 .footer-links {
   margin-left: auto;
 }
-/* ---------------- Dark Mode ---------------- */
-[data-theme="dark"] .site-footer {
-  background: #0e0f13;
-  color: #e5e5e5;
-}
-
-[data-theme="dark"] .footer-links a,
-[data-theme="dark"] .footer-socials a {
-  color: #e5e5e5;
-}
-
-[data-theme="dark"] .footer-links a:hover,
-[data-theme="dark"] .footer-socials a:hover {
-  color: #5aa0ff;
-}
-
-[data-theme="dark"] .footer-bottom {
-  color: #bbbbbb;
-}
