@@ -22,7 +22,7 @@
 
 :root {
   --skills-bg: #ffffff;
-  --skills-card-bg: #f9f9f9;
+  --skills-card-bg: #dddadabe;
   --skills-text: #1a1a1a;
   --skills-muted: #6b6b6b;
   --skills-border: rgba(255,255,255,0.04);
@@ -86,8 +86,8 @@ html, body {
 canvas#bg-animation {
     position: fixed;
     inset: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 120vw;
+    height: 120vh;
     z-index: -3;
     pointer-events: none;
     display: block;

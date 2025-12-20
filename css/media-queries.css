@@ -3,7 +3,7 @@
   .nav-toggle {
     display: block;
   }
-  
+
   .nav-links {
     position: absolute;
     top: 100%;
@@ -13,33 +13,28 @@
     background: var(--bg-primary);
     padding: 12px;
     border-radius: var(--radius);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
     /* hidden by default */
     opacity: 0;
     transform: translateY(-8px);
     pointer-events: none;
     transition: opacity 0.2s ease, transform 0.2s ease;
   }
-  
+
   .nav-links.open {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
   }
-  
+
   .nav-links a {
     padding: 10px 12px;
   }
-  .hero{
-    min-height: 60vh;
-  }
-  .hero-content{
-    margin:0 1.3rem;
-  }
+  
 
   .testimonials-grid {
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
   }
 
   .about-container {
@@ -53,7 +48,7 @@
     padding-bottom: 20px;
   }
 
-     .footer-container {
+  .footer-container {
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -70,10 +65,25 @@
     text-align: center;
     margin: 0;
   }
+    
 }
 
-@media (max-width: 640px) {
+@media (max-width: 430px) {
+
+  .hero-content {
+    margin: 0 1.3rem;
+  }
   .skills-grid {
     grid-template-columns: 1fr;
   }
+  .page{
+    padding: .3rem;
+  }
+  .card{
+    opacity: .95;
+    padding: 40px 20px;
+  }
+ .skills-card{
+  opacity: 1;
+ }
 }
