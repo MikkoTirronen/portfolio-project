@@ -4,7 +4,7 @@ export const GetWeather = () => {
 
   async function fetchWeather(lat, lon) {
     const res = await fetch(
-      `https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${lat}&lon=${lon}`,
+      `https://weatherproxy.mikkoatirronen.workers.dev?lat=${lat}&lon=${lon}`,
       {
         headers: {
           "User-Agent": USER_AGENT,
