@@ -30,17 +30,11 @@
   /* font-size: 0.85; */
 }
 
-/* ==============================
-   ICON WRAPPER
-   ============================== */
 .weather-icon-wrapper {
   position: relative;
   top:-15px
 }
 
-/* ==============================
-   TEXT NEXT TO ICON
-   ============================== */
 .weather-text {
   display: flex;
   flex-direction: column;
@@ -65,9 +59,6 @@
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
-/* ==============================
-   SUN, CLOUD, RAIN (Animations)
-   ============================== */
 .weather-svg {
   width: auto;
   height: 100px;
@@ -76,7 +67,7 @@
   stroke-linejoin: round;
 }
 
-/* 🌞 Sun */
+/* Sun */
 .weather-svg.sun circle {
   fill: var(--weather-sun);
 }
@@ -94,7 +85,7 @@
   to { transform: rotate(360deg); }
 }
 
-/* ☁️ Cloud */
+/* Cloud */
 .weather-svg .cloud {
   fill: var(--weather-cloud);
   animation: cloudFloat 6s ease-in-out infinite;
@@ -105,7 +96,7 @@
   50% { transform: translateY(10px); }
 }
 
-/* 🌧 Rain */
+/* Rain */
 .rain-drops line {
   stroke: var(--weather-rain);
   animation: rainFall 1.2s linear infinite;
@@ -123,7 +114,7 @@
   100% { transform: translateY(10px); opacity: 0; }
 }
 
-/* ❄️ Snow */
+/* Snow */
 .snowflakes circle {
   fill: white;
   animation: snowDrift 2s ease-in-out infinite;
@@ -141,7 +132,7 @@
   100% { transform: translate(-2px, 8px); opacity: 0; }
 }
 
-/* ⚡ Storm */
+/* Storm */
 .bolt {
   fill: #fde047;
   animation: lightning 3s infinite;
