@@ -96,7 +96,7 @@ export const HandleContactForm = () => {
 
       success.hidden = false;
       success.removeAttribute("aria-hidden");
-
+      success.classList.add("show")
       closeBtn.focus();
 
       form.reset();
@@ -117,8 +117,9 @@ export const HandleContactForm = () => {
     success.setAttribute("aria-hidden", "true");
 
     form.style.display = "block";
+    form.style.opacity = 1;
     form.removeAttribute("aria-hidden");
-
+    success.classList.remove("show")
     form.reset();
     updateCounter();
 
