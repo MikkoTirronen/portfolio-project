@@ -4,12 +4,7 @@ export const GetWeather = () => {
 
   async function fetchWeather(lat, lon) {
     const res = await fetch(
-      `https://weatherproxy.mikkoatirronen.workers.dev?lat=${lat}&lon=${lon}`,
-      {
-        headers: {
-          "User-Agent": USER_AGENT,
-        },
-      }
+      `https://weatherproxy.mikkoatirronen.workers.dev?lat=${lat}&lon=${lon}`
     );
 
     if (!res.ok) throw new Error("Weather fetch failed");
