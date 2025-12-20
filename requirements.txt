@@ -20,9 +20,14 @@ Passing Grade:
 Extra Challenge:
     - git commits and feature branches with relevent messages       -done 
     - warning messages when wrong inputs                            -done
-    - good UX/UI
-    - Professional- documentation - testing
-    - Get the weather from a weather api
+    - good UX/UI                                                    -done
+    - Professional- documentation - testing                         -done
+    - Get the weather from a weather api                            -done
     - Responsive                                                    -done
-    - A WCAG report
-        
+    
+    
+    *** A WCAG report ***
+    *** add Collaborator ***
+    *** test form ***
+    *** update readme *** weather widget files 
+   
