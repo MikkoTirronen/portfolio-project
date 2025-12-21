@@ -25,7 +25,7 @@
   --skills-card-bg: #dddadabe;
   --skills-text: #1a1a1a;
   --skills-muted: #6b6b6b;
-  --skills-border: rgba(255,255,255,0.04);
+  --skills-border: rgba(255,255,255,0.04)
 }
 
 /* =========================================================
@@ -33,7 +33,7 @@
    ========================================================= */
 :root[data-theme="dark"] {
     /* Derived theme colors */
-   --bg-primary: #141417;
+    --bg-primary: #141417;
     --text-primary: #eaeaea;
     --muted: #b3b3b3;
     --bg-overlay: rgba(0, 0, 0, 0.92);

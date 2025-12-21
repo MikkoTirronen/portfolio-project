@@ -100,6 +100,7 @@
 }
 
 .hero-content{
+  padding-left: 24px;
   z-index: 1;
 }
 .hero::before {
@@ -269,24 +270,7 @@
   flex-direction: column;
   
 } 
-        /* background: transparent; */
-        /* box-shadow: none; */
-        /* padding: 0; */
- 
-     /* #projects h2 {
-        
-        padding: 20px 40px;
-        background: var(--bg-primary);
-        border-radius: var(--radius);
-        opacity: .92;
-        color: var(--text-primary);
-        box-shadow: var(--card-shadow);
-    } */
-
-    /* #projects .card{
-        padding: 0;
-    } */
-
+      
 .projects-container {
     display: grid;
     gap: 20px;
@@ -295,14 +279,12 @@
 
 .project-card {
     background: rgba(255, 255, 255, 0.912);
-    /* backdrop-filter: blur(12px); */
     border-radius: var(--radius);
     padding: 30px 40px;
     border: 1px solid rgba(255, 255, 255, 0.829);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.829);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    /* margin-bottom: 10px; */
-    /* contain: layout paint; */
+
 }
 
 .project-icons img {
@@ -310,7 +292,7 @@
     height: 38px;
     margin-right: 10px;
     filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));
-    /* transition: transform 0.2s ease; */
+
 }
 #next-icon{
   background-color: rgba(233, 232, 232, 0.875);
@@ -579,6 +561,7 @@ section {
   color: #333;
 }
 
+/* ===== Footer layout ===== */
 .footer-container {
   max-width: 1100px;
 
@@ -587,14 +570,17 @@ section {
 }
 
 .footer-brand {
+  margin: auto;
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
 }
 
 .footer-description {
   line-height: 1.6;
+  opacity: 0.85;
 }
 
+/* ===== Navigation sections ===== */
 .footer-title {
   font-size: 1.1rem;
   margin-bottom: 0.8rem;
@@ -636,7 +622,7 @@ section {
 .footer-links,
 .footer-socials {
   flex: 0 0 100px;
- margin: auto;
+  margin: 0 auto;
 }
 .footer-socials {
   margin-left: 0;
