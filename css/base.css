@@ -65,19 +65,25 @@ html, body {
     background: transparent;
 }
 
-.skip-link, .skip-link:visited {
-    font-size: 1.2rem;
-    position: absolute;
-    background-color: var(--bg-primary);
-    top: -40px;
-    left: 0;
-    columns: var(--text-primary);
-    text-decoration: none;
-}   
+.skip-link {
+  position: absolute;     
+  top: -40px;             
+  left: 0;
+  background: #007bff;     
+  color: white;            
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+  transition: top 0.3s ease;
+  font-weight: 600;
+}
+
 
 .skip-link:focus {
-  top: 0;
-  background-color: var(--bg-overlay);
+  top: 10px;               
+  color: yellow;    
+  font-weight: 600;       
+  background: #0056d6;     
 }
 
 /* =========================================================
