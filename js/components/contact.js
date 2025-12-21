@@ -21,6 +21,7 @@ export function Contact() {
             required
             autocomplete="name"
             aria-describedby="name-error"
+            placeholder="Mikko Tirronen"
           >
           <span class="error" id="name-error" aria-live="polite"></span>
         </div>
@@ -34,6 +35,7 @@ export function Contact() {
             required
             autocomplete="email"
             aria-describedby="email-error"
+            placeholder="fake@email.com"
           >
           <span class="error" id="email-error" aria-live="polite"></span>
         </div>
@@ -45,6 +47,7 @@ export function Contact() {
             name="message"
             maxlength="800"
             aria-describedby="messageCounter message-error"
+            placeholder="Hey, lets get in contact!"
           ></textarea>
 
           <div

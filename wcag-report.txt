@@ -1,0 +1,44 @@
+Report: Adapting My Porfolio to WCAG Guidelines
+
+1. The purpose of this report is to explain how this porfolio meets the Web Content Accessibility Guidelines(WCAG) 2.1 standard.
+
+2. Accessibility principals Applied
+    WCAG guidlines are organized into a group of 4 principals. This porfolio addresses these principals as follows:
+    
+    2.1 Perceivable
+        * Text alternatives for non-text content: All images, icons, and logos have descriptive alt attributes 
+        ensuring screen readers can convey the content.
+
+        * Color contrast: background and foreground colors meet the WCAG minimum constrast of 4.5:1 for 
+        normal text and 3:1 for large text, improving readability.
+
+        * Scalable content: text can be resixed up to 200% without loss of content or functionality.
+
+        * Media alternatives: N/a
+
+    2.2 Operable
+        * All interactive elements can be accessed and operated using a keyboard alone. Ive also added a "Skip to Content"
+        that will skip the nav bar and set focus on the first content div under the hero.
+
+        * Focus indicators: visible focus outlines are maintained on all interactive elements.
+
+        * Logical tab order: the tab sequence follows logical reading order.
+
+        * Responsive layout: The website adapts to difference screen sizes through the use of media queries and flex/grid sizing. 
+
+    2.3 Understandable
+        * Navigation menus and links maining a consistent structure in the SPA.
+
+        * Clear language in headings labels and links.
+        
+        * Error identification: Forms provide clear feedback if required fields are missing or incorrectly filled.
+
+    2.4 Robust
+
+        * Semantic HTML is used throughout the website. 
+
+        * Aria roles included where needed.
+
+        * tested in safari and chrome.
+
+The website scores a 100% on Accessibility when tested with lighthouse. 

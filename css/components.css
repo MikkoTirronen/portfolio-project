@@ -401,7 +401,7 @@ textarea {
     display: block;
     min-height: 18px;
     font-size: 0.85rem;
-    margin-top: 4px;
+    margin-top: 10px;
     color: var(--error);
     line-height: 1.2;
     opacity: 0;
