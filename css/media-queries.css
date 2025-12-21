@@ -47,17 +47,19 @@
     justify-self: center; /* center the picture */
     padding-bottom: 20px;
   }
-
-  .footer-container {
-    justify-content: center;
-    flex-wrap: wrap;
+  .project-container{
+    grid-template-columns: 200px, 1fr;
   }
-
+  .footer-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
   .footer-left {
     flex: 0 0 100%;
     text-align: center;
   }
-
+  
   .footer-links,
   .footer-socials {
     flex: 0 0 auto;
@@ -86,4 +88,18 @@
  .skills-card{
   opacity: 1;
  }
+ .hero-content{
+  padding-left: 0;
+  margin: 0;
+ }
+ #weather-widget{
+  margin: 40px 20px;
+ }
+ .project-card {
+    padding: 20px;
+    left: 40px;
+  }
+  .projects-container{
+    grid-template-columns: none;
+  }
 }
