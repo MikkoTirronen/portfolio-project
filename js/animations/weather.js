@@ -145,7 +145,7 @@ export const GetWeather = () => {
       const condition = "" || extractCondition(timeseries);
       console.log(min, max);
       console.log(condition);
-      document.getElementById("weatherTemp").textContent = `${min}° / ${max}°`;
+      document.getElementById("weatherTemp").textContent = `${min}°C / ${max}°C`;
       document.getElementById("weatherDesc").textContent = condition.replace(
         /_/g,
         " "
@@ -158,5 +158,5 @@ export const GetWeather = () => {
     }
   }
 
-  loadWeather();
+  window.addEventListener("load", loadWeather);
 };

@@ -12,7 +12,7 @@ import { HandleContactForm } from "./animations/handle-contact-form.js";
 import { ToggleBurgerMenu } from "./animations/toggle-burger-menu.js";
 
 
-document.addEventListener("DOMContentLoaded", () => {
+
   renderComponent("#nav", Navbar);
   renderComponent("#hero", Hero);
   renderComponent("#about", About);
@@ -25,4 +25,4 @@ document.addEventListener("DOMContentLoaded", () => {
   AddCharacterCounter();
   HandleContactForm();
   ToggleBurgerMenu();
-});
+

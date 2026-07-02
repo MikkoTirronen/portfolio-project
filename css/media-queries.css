@@ -67,7 +67,13 @@
     text-align: center;
     margin: 0;
   }
-    
+ 
+  #about { min-height: 433px; } 
+  #skills { min-height: 658px; } 
+  #projects { min-height: 738px; }
+  #testimonials { min-height: 400px; }
+  #contact { min-height: 722px; } 
+  #footer { min-height: 343px; }
 }
 
 @media (max-width: 430px) {
@@ -102,4 +108,37 @@
   .projects-container{
     grid-template-columns: none;
   }
+
+  
 }
+/* 
+#header { min-height: 61px; }
+#nav { min-height: 41px; }
+#hero { min-height: 385px; }
+
+
+#about{
+  min-height: 746px;
+}
+#skills { min-height: 1170px; }
+#projects { min-height: 1342px; }
+#testimonials { min-height: 804px; }
+#contact { min-height: 722px; }
+#footer { min-height: 380px; } */
+/* Tablet / medium screens */
+/* @media (min-width: 768px) {
+  #about { min-height: 433px; }
+  #skills { min-height: 450px; }
+  #projects { min-height: 800px; }
+  #testimonials { min-height: 450px; }
+  #contact { min-height: 400px; }
+} */
+
+/* Desktop / large screens */
+/* @media (min-width: 1024px) {
+  #about { min-height: 650px; }
+  #skills { min-height: 500px; }
+  #projects { min-height: 900px; }
+  #testimonials { min-height: 500px; }
+  #contact { min-height: 450px; }
+} */

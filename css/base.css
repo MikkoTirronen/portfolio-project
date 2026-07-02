@@ -89,14 +89,14 @@ html, body {
 /* =========================================================
    Canvas Background Animation
    ========================================================= */
-canvas#bg-animation {
+#bg-animation {
     position: fixed;
     inset: 0;
-    width: 120vw;
-    height: 120vh;
+    width: 100vw;
+    height: 100dvh;
     z-index: -3;
     pointer-events: none;
-    display: block;
+    
 }
 
 /* =========================================================
