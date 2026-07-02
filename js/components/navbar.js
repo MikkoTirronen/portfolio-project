@@ -11,8 +11,7 @@ export function Navbar({ children }) {
           <div id="navLinks" class="nav-links" role="menubar" aria-label="Sections">
             <a href="#about" data-link class="active" role="menuitem">About</a>
             <a href="#skills" data-link role="menuitem">Skills</a>
-            <a href="#projects" data-link role="menuitem">Projects</a>
-            <a href="#testimonials" data-link role="menuitem">Testimonials</a>
+            <a href="#projects" data-link role="menuitem">Projects</a>           
             <a href="#contact" data-link role="menuitem">Contact</a>
           </div>
           <button id="themeToggle" class="theme-toggle toggle-hover" aria-label="Toggle theme">

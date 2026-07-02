@@ -12,35 +12,35 @@ export function Skills() {
         <li><strong>React</strong> – Hooks, component-driven UI</li>
         <li><strong>TypeScript</strong> – Type-safe applications</li>
         <li><strong>JavaScript (ES6+)</strong> – Async patterns</li>
-        <li><strong>HTML & CSS</strong> – Responsive, accessible layouts</li>
+        <li><strong>HTML & CSS/Tailwind</strong> – Responsive, accessible layouts</li>
       </ul>
     </div>
 
     <div class="skill-card">
       <h3>Backend</h3>
       <ul>
-        <li><strong>Node.js</strong> – REST APIs, authentication</li>
-        <li><strong>C# / .NET</strong> – API development, clean architecture</li>
+      <li><strong>C# / .NET</strong> – API development, clean architecture, domain driven development, microservices, authentication</li>
+      
+      <li><strong>Node.js</strong> – REST APIs, authentication</li>
       </ul>
-    </div>
-
-    <div class="skill-card">
+      </div>
+      
+      <div class="skill-card">
       <h3>Databases</h3>
       <ul>
-        <li><strong>PostgreSQL</strong> – Relational design, queries</li>
-        <li><strong>MongoDB</strong> – Document modeling</li>
+      <li><strong>PostgreSQL</strong> – Relational design, queries</li>
+      <li><strong>MongoDB</strong> – Document modeling</li>
       </ul>
-    </div>
-
-    <div class="skill-card">
+      </div>
+      
+      <div class="skill-card">
       <h3>Cloud & Tools</h3>
       <ul>
+        <li><strong>Queues</strong> – RabbitMQ, Azure-Service Bus</li>
         <li><strong>Azure</strong> – App Services, deployments</li>
         <li><strong>Git & GitHub</strong> – Version control, PRs</li>
       </ul>
     </div>
   </div>
-
-
         `;
 }
