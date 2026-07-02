@@ -1,5 +1,6 @@
 export function Footer() {
-    return `
+  const year = new Date().getFullYear();
+  return `
     <div class="footer-container">
       <div class="footer-left">
         <h3 class="footer-brand">Mikko Tirronen</h3>
@@ -27,8 +28,8 @@ export function Footer() {
       </nav>
 
       <div class="footer-bottom">
-        <p>© 2025 Mikko Tirronen. All rights reserved.</p>
+        <p>© ${year} Mikko Tirronen. All rights reserved.</p>
       </div>
     </div>
-  `
+  `;
 }

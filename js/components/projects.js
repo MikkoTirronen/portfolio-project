@@ -18,7 +18,7 @@ export function Projects() {
       </p>
       <div class="project-links">
         <span class="btn disabled" aria-disabled="true">Live</span>
-        <a href="#" target="_blank" class="btn">GitHub</a>
+        <a href="https://github.com/MikkoTirronen" target="_blank" class="btn">GitHub</a>
       </div>
     </article>
 
@@ -33,7 +33,7 @@ export function Projects() {
       </p>
       <div class="project-links">
         <span class="btn disabled" aria-disabled="true">Live</span>
-        <a href="#" target="_blank" class="btn">GitHub</a>
+        <a href="https://github.com/MikkoTirronen" target="_blank" class="btn">GitHub</a>
       </div>
     </article>
 
@@ -48,7 +48,7 @@ export function Projects() {
       </p>
       <div class="project-links">
         <span class="btn disabled" aria-disabled="true">Live</span>
-        <a href="#" target="_blank" class="btn">GitHub</a>
+        <a href="https://github.com/MikkoTirronen" target="_blank" class="btn">GitHub</a>
       </div>
     </article>
 
@@ -63,7 +63,7 @@ export function Projects() {
       </p>
       <div class="project-links">
         <span class="btn disabled" aria-disabled="true">Live</span>
-        <a href="#" target="_blank" class="btn">GitHub</a>
+        <a href="https://github.com/MikkoTirronen" target="_blank" class="btn">GitHub</a>
       </div>
     </article>
   </div>

@@ -19,20 +19,19 @@ export function About() {
             Hi — I build web apps that are pragmatic and visually
             considerate. I enjoy working across stacks, designing clean
             APIs, and adding small creative flourishes on the frontend. My
-            current interests: generative art, smooth UX and resilient
+            current interests: recursive art, smooth UX and resilient
             backend patterns.
           </p>
 
           <p>
             This site showcases a few projects and experiments — the
-            generative background is a small creative playground I use to
-            test ideas.
+            background is recursively generated from a defined color pallete.
           </p>
 
           <div class="button-container" role="group" aria-label="Downloads">
             <a
               id="download-button"
-              href="./assets/coming-soon.pdf"
+              href="./assets/CV-MikkoTirronen.pdf"
               download
               class="btn"
             >

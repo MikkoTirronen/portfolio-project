@@ -17,11 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
   renderComponent("#hero", Hero);
   renderComponent("#about", About);
   renderComponent("#skills", Skills);
-  renderComponent("#projects", Projects);
-  renderComponent("#testimonials", Testimonials);
+  renderComponent("#projects", Projects); 
   renderComponent("#contact", Contact);
   renderComponent("#footer", Footer);
-
   AddCharacterCounter();
   HandleContactForm();
   ToggleBurgerMenu();
