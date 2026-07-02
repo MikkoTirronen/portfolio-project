@@ -187,4 +187,4 @@ Each component returns an HTML string that is injected into the DOM.
 
 ## Notes
 
-This project focuses on understanding core frontend concepts such as DOM manipulation, animations, state-like rendering patterns, and SPA architecture—without relying on external frameworks.
+This project focuses on understanding core frontend concepts such as DOM manipulation, animations, state-like rendering patterns, and SPA architecture without relying on external frameworks.
